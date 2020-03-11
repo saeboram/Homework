@@ -1,0 +1,96 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <!-- head 안에 들어 갈 어떤 요소들을 여기에 넣습니다 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1주차 숙제</title>
+    <link href="https://fonts.googleapis.com/css?family=Gaegu|Nanum+Gothic+Coding|Nanum+Pen+Script|Song+Myung&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+    <style>
+        * {
+            font-family: 'Song Myung', serif;
+        }
+        
+        .image_width {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .text_width {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: left;
+        }
+        
+        .button_below {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="image_width">
+        <img src="https://file3.instiz.net/data/file3/2018/10/14/2/5/7/25711952e34692d8eba9e70caaf01b37.jpg" width="800px" height="500px">
+    </div>
+    <div class="text_width">
+        <!-- 상단문구   -->
+        <div>
+            <p>
+                <h1>호불호 세-트 &nbsp; <span style="font-size: 20pt"> 가격 150,000원/개</span> </h1>
+        </div>
+        <!-- 제품설명 -->
+        <p>민트초코, 파인애플 피자 세트를 팝니다!시비 걸고 싶은 사람이 있나요? 그만 좀 만났으면 하는 사람이 있나요? 이걸 주세요! 음료로는 데자와, 솔의 눈, 맥콜이 있습니다.</p>
+    </div>
+
+    <div>
+        <!-- 버튼 -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">주문자 이름</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" width="200px">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">수량</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected>--수량을 선택하세요--</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">주소</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+
+    <div class="button_below">
+        <button type="button" class="btn btn-primary">주문하기</button>
+    </div>
+</body>
+
+</html>
