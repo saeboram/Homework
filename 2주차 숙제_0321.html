@@ -1,0 +1,146 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- head 안에 들어 갈 어떤 요소들을 여기에 넣습니다 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2주차 숙제</title>
+   <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel = "stylesheet" type = "text/css" href="1-2주차 숙제.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+
+<script>
+
+// 이름, 수량, 주소, 전화번호 오류
+    function order_photo() {
+    let name = $('#input-q1').val();
+    let count = $('#input-q2').val();
+    let address = $('#input-q3').val();
+    let number = $('#input-q4').val();
+
+if (name == '') {
+    alert ('이름을 적어주세요!');
+    return 
+} else if (count == '') {
+    alert ('수량을 입력해주세요');
+    return 
+} else if (address == '') {
+    alert ('주소를 입력해주세요!');
+    return
+} else if (number.length !== 13) {
+    alert('전화번호 형식에 맞춰 입력해주세요! ex)010-****-****')
+    return
+} else if(name !=='' && count !=='' && address !==''&& number !=='') {
+alert ('주문이 완료되었습니다!')
+} 
+    }
+// 오더리스트
+function order_lists(name, count, address, number){
+let temp_html = '<tr>\
+    <td>'+ name +'</tb>\
+    <td>'+ count +'</tb>\
+    <td>'+ address +'</tb>\
+    <td>'+ number +'</tb>\
+    </tr>';
+    $('#lists').append(temp_html);
+} 
+
+
+</script>
+</head>
+
+
+<body>
+
+    <div class="image_width">
+        <img src="https://pbs.twimg.com/media/ETX1DQbVAAAB5lI?format=jpg&name=small" >
+    </div>
+    <div class="text_width">
+        <!-- 상단문구   -->
+        <div>
+            <p>
+                <h1>이 강아지를 본 적 있으신가요??!?!?! <span style="font-size: 15pt"> 가격 0원/장</span> </h1>
+        </div>
+        <!-- 제품설명 -->
+        왜냐하면 얘가 정말 잘생겼거든요! 잃어버리진 않았고 너무 잘생겨서 올렸습니다. <br>사진 갖고 싶으신 분들이 계신다면 연락주세요!!! 숨겨놓은 앙큼깜쮝이 사진까지 보내드리겠습니다 (찡긋)
+        </p>
+    </div>
+
+    <div class="button_below">
+        <!-- 버튼 -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">주문자 이름</span>
+            </div>
+            <input id="input-q1" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" width="200px">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">수량</label>
+            </div>
+            <select class="custom-select" id="input-q2">
+                <option selected>--수량을 선택하세요--</option>
+                <option value="1">1장</option>
+                <option value="2">2장</option>
+                <option value="3">3장</option>
+                <option value="3">4장</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">주소</span>
+            </div>
+            <input id= 'input-q3' type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
+            </div>
+            <input id = 'input-q4' type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+<!-- 주문버튼 -->
+    <div class="button_below">
+        <button onclick="order_photo()" type="button" class="btn btn-primary">주문하기</button>
+
+    </div>
+
+</div>
+<br>
+<!-- 오더리스트 -->
+<div class="order_list">
+<table class="lists">
+    <thead>
+      <tr>
+        <th scope="col">이름</th>
+        <th scope="col">수량</th>
+        <th scope="col">주소</th>
+        <th scope="col">전화번호</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">추가생성은</th>
+        <td>장렬한</td>
+        <td>실패를</td>
+        <td>하고 말았습니다</td>
+      </tr>
+      <tr>
+        <th scope="row">왜</th>
+        <td>버튼을</td>
+        <td>눌러도 추가가</td>
+        <td>되지 않을까요</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
+
+</body>
+
+</html>
